@@ -23,6 +23,36 @@ h1 {
 
 /* I didn't know this html element, and, this is OLD */
 mark {
-	background-color: #f8db75;
 	color: inherit;
+	background-color: transparent;
+
+	/* Use of many backgrounds in just a unique element, pretty cool */
+	background-image:
+		linear-gradient(to bottom right, transparent 50%, #f8db75 50%),
+		linear-gradient(to right, #f8db75, #f8db75),
+		linear-gradient(to top left, transparent 50%, #f8db75 50%)
+	;
+
+	/*
+	 * Position each of the linear gradients to:
+	 *
+	 * put the first as a triangle in the left
+	 * put the second as a rectangle in the middle
+	 * put the third as a triangle in the right
+	 *
+	 * background-size and background-positon work together
+	 */
+	background-size:
+		0.5em 1em,
+		calc(100% - 0.5em * 2 + 1px) 1em,
+		0.5em 1em
+	;
+
+	background-position:
+		left center,
+		center,
+		right center
+	;
+
+	background-repeat: no-repeat;
 }
