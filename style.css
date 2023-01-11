@@ -1,0 +1,28 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: #f6f6ec;
+	font-family: 'Hanken Grotesk', sans-serif;
+
+	/* nice new way to center some content */
+	display: grid;
+	place-items: center;
+}
+
+h1 {
+	color: #142847;
+
+	/* nice text formatting for titles */
+	max-width: 18ch;
+	line-height: 1.1;
+	font-size: 7.5vw;
+}
+
+/* I didn't know this html element, and, this is OLD */
+mark {
+	background-color: #f8db75;
+	color: inherit;
+}
