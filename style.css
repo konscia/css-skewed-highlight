@@ -25,6 +25,7 @@ h1 {
 mark {
 	color: inherit;
 	background-color: transparent;
+	background-repeat: no-repeat;
 
 	/* Use of many backgrounds in just a unique element, pretty cool */
 	background-image:
@@ -54,5 +55,7 @@ mark {
 		right center
 	;
 
-	background-repeat: no-repeat;
+	/* good way to extend the side edges of the text and enable background to "escape" from the text limits */
+	margin-inline: -0.5em;
+	padding-inline: 0.5em;
 }
