@@ -23,6 +23,10 @@ h1 {
 
 /* I didn't know this html element, and, this is OLD */
 mark {
+	--mark-skew: 0.5em;
+	--mark-height: 1em;
+	--mark-overlap: 0.3em;
+
 	color: inherit;
 	background-color: transparent;
 	background-repeat: no-repeat;
@@ -44,9 +48,9 @@ mark {
 	 * background-size and background-positon work together
 	 */
 	background-size:
-		0.5em 1em,
-		calc(100% - 0.5em * 2 + 1px) 1em,
-		0.5em 1em
+		var(--mark-skew) 1em,
+		calc(100% - var(--mark-skew) * 2 + 1px) 1em,
+		var(--mark-skew) 1em
 	;
 
 	background-position:
@@ -56,6 +60,6 @@ mark {
 	;
 
 	/* good way to extend the side edges of the text and enable background to "escape" from the text limits */
-	margin-inline: -0.5em;
-	padding-inline: 0.5em;
+	margin-inline: calc(var(--mark-skew) * -1);
+	padding-inline: var(--mark-skew);
 }
