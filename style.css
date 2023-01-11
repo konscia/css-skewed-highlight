@@ -62,4 +62,11 @@ mark {
 	/* good way to extend the side edges of the text and enable background to "escape" from the text limits */
 	margin-inline: calc(var(--mark-skew) * -1);
 	padding-inline: var(--mark-skew);
+
+	/*
+	 * enable the effect on each line of the text
+	 * that is "a way to control how the box breaks into multiple lines or, to be precise, how its decoration breaks"		
+	 */
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 }
